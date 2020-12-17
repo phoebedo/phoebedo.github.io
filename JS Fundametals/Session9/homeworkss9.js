@@ -76,7 +76,7 @@ if (/[a-z]/i.test(char)) {
 }
 
 //Kiem tra nguyen am phu am
-let char = prompt("Nhap mot ki tu chu cai");
+let char = prompt("Nhap mot chu cai");
 if (/[aeiou]/i.test(char)) {
   console.log("Nguyen am");
 } else {
