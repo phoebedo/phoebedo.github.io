@@ -107,7 +107,8 @@ if (a === 0) {
   if (b != 0) {
     console.log("Phuong trinh co 1 nghiem x= ", -c / b);
   }
-} else {
+} 
+else {
   let delta = b * b - 4 * a * c;
   if (delta < 0) {
     console.log("Phuong trinh vo nghiem");
