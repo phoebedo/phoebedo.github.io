@@ -44,10 +44,10 @@ let n3 = +prompt("Nhap so thu ba: ");
 if (n1 >= n2 && n1 >= n3) {
   console.log("So lon nhat:", n1);
 }
-if (n2 >= n1 && n1 >= n3) {
+if (n2 >= n1 && n2 >= n3) {
   console.log("So lon nhat:", n2);
 }
-if (n3 >= n1 && n3 >= n1) {
+if (n3 >= n1 && n3 >= n2) {
   console.log("So lon nhat:", n3);
 }
 
