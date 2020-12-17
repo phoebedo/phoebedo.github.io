@@ -53,14 +53,11 @@ if (n3 >= n1 && n3 >= n2) {
 
 //Chia het cho 5 va 11
 let n = +prompt("Nhap so n=");
-if (n % 5 == 0) {
-  console.log("Chia het cho 5");
-}
-if (n % 11 == 0) {
-  console.log("Chia het cho 11");
+if (n % 55 == 0) {
+  console.log("Chia het cho ca 5 va 11");
 }
 else {
-    console.log("Khong chia het cho so nao ca");
+    console.log("Khong chia het cho ca 5 va 11");
 }
 //Nam nhuan
 let year = +prompt("Nhap nam:");
