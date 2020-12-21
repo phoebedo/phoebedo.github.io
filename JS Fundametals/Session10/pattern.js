@@ -26,7 +26,7 @@ function patternOne(n) {
 
 //inverse 
 function patternOne(n) {
-    for (let i = 1; i <= n; i++) {
+    for (let i = n; i >0; i--) {
         let str = "";
 
         for (let j = 1; j <= i; j++) {
@@ -38,7 +38,7 @@ function patternOne(n) {
 }
 //inverse - number 
 function patternOne(n) {
-    for (let i = 1; i <= n; i++) {
+    for (let i = 1; i >0 n; i--) {
         let str = "";
 
         for (let j = 1; j <= i; j++) {
