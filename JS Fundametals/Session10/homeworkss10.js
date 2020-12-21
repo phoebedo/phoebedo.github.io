@@ -24,7 +24,7 @@ function multTabl() {
             else if (i > 0 && j > 0) {
                 result += (i * j) + ' ';
                 if (i*j < 10) {
-                    result = String(result).padStart(1, '0');
+                    result = String(result).padStart(2, '0');
                 }
             }
         }   
