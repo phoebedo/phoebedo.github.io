@@ -53,14 +53,11 @@ if (n3 >= n1 && n3 >= n2) {
 
 //Chia het cho 5 va 11
 let n = +prompt("Nhap so n=");
-if (n % 5 == 0) {
-  console.log("Chia het cho 5");
-}
-if (n % 11 == 0) {
-  console.log("Chia het cho 11");
+if (n % 55 == 0) {
+  console.log("Chia het cho ca 5 va 11");
 }
 else {
-    console.log("Khong chia het cho so nao ca");
+    console.log("Khong chia het cho ca 5 va 11");
 }
 //Nam nhuan
 let year = +prompt("Nhap nam:");
@@ -79,7 +76,7 @@ if (/[a-z]/i.test(char)) {
 }
 
 //Kiem tra nguyen am phu am
-let char = prompt("Nhap mot ki tu chu cai");
+let char = prompt("Nhap mot chu cai");
 if (/[aeiou]/i.test(char)) {
   console.log("Nguyen am");
 } else {
@@ -110,7 +107,8 @@ if (a === 0) {
   if (b != 0) {
     console.log("Phuong trinh co 1 nghiem x= ", -c / b);
   }
-} else {
+} 
+else {
   let delta = b * b - 4 * a * c;
   if (delta < 0) {
     console.log("Phuong trinh vo nghiem");
