@@ -8,6 +8,32 @@ function multiplicationTable(){
 }
 multiplicationTable();
 
+//Bang cuu chuong level dai hoc 
+function multTabl() {
+    let result = '*';
+    for (let i = 0; i < 11; i++) {
+
+        for (let j = 0; j < 11; j++) {
+
+            if(i == 0 && j > 0){
+            result += '[' + j + ']';
+            } 
+            else if(j == 0 && i>0){
+            result += '[' + i + '] ';
+            } 
+            else if (i > 0 && j > 0) {
+                result += (i * j) + ' ';
+                if (i*j < 10) {
+                    result = String(result).padStart(2, '0');
+                }
+            }
+        }   
+        result += '\n'
+    }
+
+console.log(result);
+}
+
 // Fizz Buzz
  for (let i = 0; i <= 100; i++){
     if (i % 3 == 0 && i % 5 != 0) {
