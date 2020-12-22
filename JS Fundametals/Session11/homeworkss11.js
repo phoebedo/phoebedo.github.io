@@ -17,7 +17,7 @@ let isTriangle = (a, b, c) => a + b > c && b + c > a && a + c > b;
 //3. guess Num 
 
 function guessNum() {
-    let a = Math.round(Math.random(0, 10));
+    let a = Math.round(Math.random() * 10);
     let guess = +prompt("Guess???"); 
     let count = 1; 
     while (count < 3 && guess != null && guess != "") {
