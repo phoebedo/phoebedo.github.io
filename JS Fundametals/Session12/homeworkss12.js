@@ -57,6 +57,8 @@ function Calculator() {
     };
     
 }
+let cal = new Calculator; 
+cal.get(4, 5).add().div().exp();
 
 
 //Counter
