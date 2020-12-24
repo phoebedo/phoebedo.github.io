@@ -90,10 +90,6 @@ function Girl(name,dob,job,add) {
     this.eat = function () {
         console.log("chomp chomp chomp");
     };
-    this.dance = function () {
-        console.log("Eyyo Hiphop neva dies");
-    }
-
 }
 let thao = new Girl ("Thao", "05/15/99", "student", "119TDH");
 thao.eat();
