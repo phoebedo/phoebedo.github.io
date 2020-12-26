@@ -81,14 +81,25 @@ function shorten(str, words) {
 shorten("It's the most wonderful time of the year",5)
 
 //10. GUID 
+//UUIDs must be of the form "xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx", 
+//where x is one of[0 - 9, a - f] M is one of[1 - 5], and N is[8, 9, a, or b]
 function generateGUID() {
-    let result = "";
-    for (let i = 0; i < 32; i++){
-        result += String.fromCodePoint(Math.floor(Math.random() * (126 - 33 + 1) + 33)); 
+    let split = "xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx".split('');
+    for (let i = 0; i<split.length; i++){
+        if (split[i] == "x") {
+            split[i] = Math.floor(Math.random() * 16).toString(16);
+        }
+        if(split[i] == "M"){
+            split[i] = Math.floor(Math.random() * 5 + 1);
+        }
+        if (split[i] == 'N') {
+            split[i] = [8,9,'a','b'][Math.floor(Math.random() *[8,9,'a','b'].length)];
+        }
     }
-    return result; 
+    return split.join(''); 
 }
 generateGUID();
+
 //11. to next 
 function replace(str) {
     let result = ""; 
