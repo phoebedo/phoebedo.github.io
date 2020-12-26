@@ -110,4 +110,4 @@ function replace(str) {
 }
 replace("abc");
 
-//TO BE CONTINUED 
+//TO BE CONTINUED boi vi thay chi bao hom nay la due cua phan string thoi ^^
