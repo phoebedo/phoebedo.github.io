@@ -111,3 +111,70 @@ function replace(str) {
 replace("abc");
 
 //TO BE CONTINUED boi vi thay chi bao hom nay la due cua phan string thoi ^^
+//Cont'd
+//Viết hàm arr._sort(arr, callback) thực thi code giống như hàm sort() - Skip 
+//Viết hàm arr._forEach(arr, callback) thực thi code giống như hàm forEach()
+let arr = [1, 2, 3]; 
+function callback(number) {
+    console.log(number ** 2);
+}
+arr._forEach = function (callback) {
+    for (let i = 0; i < this.length; i++){
+        callback(this[i]);
+    }
+}
+arr._forEach(callback); 
+//Viết hàm arr._filter(arr, callback) thực thi code giống như hàm filter()
+let arr = [
+    { name: "Ba", age: 29 },
+    { name: "Bon", age: 3 },
+];
+
+function callback(obj) {
+    if (obj.age > 20) {
+        console.log(obj); 
+    }
+}
+arr._filter = function (callback) {
+    for (let i = 0; i < this.length; i++){
+        callback(this[i]); 
+    }
+    
+}
+arr.filter(callback); 
+//Viết hàm arr._map(arr, callback) thực thi code giống như hàm map() - eg.#3
+let arr = ["abc", "def"]; 
+function callback(str) {
+    console.log(str.toUpperCase()) ;
+}
+arr._map = function (callback) {
+    for (let i = 0; i < this.length; i++){
+        callback(this[i])
+    }
+}
+arr._map(callback); 
+//Viết hàm arr._reduce(arr, callback) thực thi code giống như hàm reduce()
+let arr = [1, 2, 3, 4, 5, 6]; 
+function callback(sum,num) {
+    return sum+num; 
+}
+arr._reduce = function () {
+    let sum = 0; 
+    for (let i = 0; i < this.length; i++){
+        sum = callback(sum,this[i])
+    }
+    return sum;
+}
+arr._reduce(callback); 
+
+//MORE METHODS 
+//1. every() -> whether all elements in the array satisfy the test implemented by the callback function.
+//returns a Boolean value. Example: 
+[1, 2, 3, 4, 5, 6, 7, 8, 9].every((value) => value < 10) //return true
+
+//flat() method creates a new array with all 
+//sub - array elements concatenated into it recursively up to the specified depth.
+//parameter = desired depth : array.flat([depth])
+let arr = [1, 2,[[[3, 4]]]]; 
+console.log(arr.flat());  // [1,2,3,4]
+console.log(arr.flat(2));// [1,2,[3,4]]
