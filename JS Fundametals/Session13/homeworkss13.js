@@ -194,3 +194,10 @@ console.log(arr.fill(5, 1));
 
 console.log(array1.fill(6)); 
 // [6, 6, 6, 6]
+
+//find() method returns the value of the FIRST element of an array 
+//that satisfies the provided testing function.
+//If no values satisfies the testing function, undefined is returned.
+let arr = [1, 23, 14, 25, 12, 42, 54, 87]; 
+console.log(arr.find((elem) => elem >= 40)); 
+// 42
