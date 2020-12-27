@@ -112,7 +112,25 @@ replace("abc");
 
 //TO BE CONTINUED boi vi thay chi bao hom nay la due cua phan string thoi ^^
 //Cont'd
-//Viết hàm arr._sort(arr, callback) thực thi code giống như hàm sort() - Skip 
+//Viết hàm arr._sort(arr, callback) thực thi code giống như hàm sort() - Bubble Sort truoc da nhe thay. Tim Sort dang bi' aj :(
+function bubbleSort(arr) {
+    for (let i = 1; i < arr.length; i++) { 
+        let swap = 0;
+        for (let j = 0; j < arr.length-i-1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                swap = 1;
+            }
+        }
+        if (swap = 0) {
+            break;
+        }
+    }
+    return arr; 
+}
+bubbleSort([1, 3, 2, 4, 7, 10, 23, 12, 54, 32,101,32,123]);   
 //Viết hàm arr._forEach(arr, callback) thực thi code giống như hàm forEach()
 let arr = [1, 2, 3]; 
 function callback(number) {
