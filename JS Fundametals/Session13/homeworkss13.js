@@ -168,13 +168,29 @@ arr._reduce = function () {
 arr._reduce(callback); 
 
 //MORE METHODS 
-//1. every() -> whether all elements in the array satisfy the test implemented by the callback function.
+//every() -> whether all elements in the array satisfy the test implemented by the callback function.
 //returns a Boolean value. Example: 
 [1, 2, 3, 4, 5, 6, 7, 8, 9].every((value) => value < 10) //return true
 
-//flat() method creates a new array with all 
+//flat() -> creates a new array with all 
 //sub - array elements concatenated into it recursively up to the specified depth.
 //parameter = desired depth : array.flat([depth])
 let arr = [1, 2,[[[3, 4]]]]; 
 console.log(arr.flat());  // [1,2,3,4]
 console.log(arr.flat(2));// [1,2,[3,4]]
+
+//fill() ->changes all elements in an array to a static value, 
+//from a start index(default= 0) to an end index(default= array.length).
+//It returns the modified array: arr.fill(value, start_index, end_index)
+let arr = [1, 2, 3, 4];
+
+// fill with 3 from position 2 until position 4
+console.log(arr.fill(3, 2, 4));
+// [1, 2, 0, 0]
+
+// fill with 5 from position 1 (ne end index specified -> from 1 to arr.length)
+console.log(arr.fill(5, 1));
+// [1, 5, 5, 5]
+
+console.log(array1.fill(6)); 
+// [6, 6, 6, 6]
