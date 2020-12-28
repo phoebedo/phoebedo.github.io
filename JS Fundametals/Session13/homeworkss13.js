@@ -133,57 +133,55 @@ function bubbleSort(arr) {
 bubbleSort([1, 3, 2, 4, 7, 10, 23, 12, 54, 32,101,32,123]);   
 //Viết hàm arr._forEach(arr, callback) thực thi code giống như hàm forEach()
 let arr = [1, 2, 3]; 
-function callback(number) {
-    console.log(number ** 2);
-}
 arr._forEach = function (callback) {
+    let result = []; 
     for (let i = 0; i < this.length; i++){
-        callback(this[i]);
+        result.push(callback(this[i]));
     }
+    return result;
 }
-arr._forEach(callback); 
+arr._forEach((i) => i**2); 
 //Viết hàm arr._filter(arr, callback) thực thi code giống như hàm filter()
 let arr = [
     { name: "Ba", age: 29 },
     { name: "Bon", age: 3 },
 ];
 
-function callback(obj) {
-    if (obj.age > 20) {
-        console.log(obj); 
-    }
-}
 arr._filter = function (callback) {
+    let result = [];
     for (let i = 0; i < this.length; i++){
-        callback(this[i]); 
+        if (callback(this[i])) {
+            result.push(this[i]); 
+        }
     }
+    return result
     
 }
 arr.filter(callback); 
 //Viết hàm arr._map(arr, callback) thực thi code giống như hàm map() - eg.#3
 let arr = ["abc", "def"]; 
 function callback(str) {
-    console.log(str.toUpperCase()) ;
+    return str.toUpperCase() ;
 }
 arr._map = function (callback) {
+    let result = []; 
     for (let i = 0; i < this.length; i++){
-        callback(this[i])
+        result.push(callback(this[i]))
     }
+    return result; 
 }
 arr._map(callback); 
 //Viết hàm arr._reduce(arr, callback) thực thi code giống như hàm reduce()
 let arr = [1, 2, 3, 4, 5, 6]; 
-function callback(sum,num) {
-    return sum+num; 
-}
-arr._reduce = function () {
-    let sum = 0; 
+
+arr._reduce = function (callback, initial) {
+    let accum = initial; 
     for (let i = 0; i < this.length; i++){
-        sum = callback(sum,this[i])
+        accum = callback(accum,this[i])
     }
-    return sum;
+    return accum;
 }
-arr._reduce(callback); 
+arr._reduce((sum,i)=> sum+=i, 0); 
 
 //MORE METHODS 
 //every() -> whether all elements in the array satisfy the test implemented by the callback function.
