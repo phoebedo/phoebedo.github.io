@@ -235,7 +235,7 @@ function age(y, m, d) {
         return `${years - 1} year(s) old`; 
     }
     else {
-        if (today.getDate() >= dob.getDate) {
+        if (today.getDate() <= dob.getDate()) {
             return `${years} year(s) old`; 
         }
         else {
