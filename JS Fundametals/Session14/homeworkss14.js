@@ -123,7 +123,7 @@ function flatten(arr) {
     }
     return result;
 }
-flatten(arr);  //Or: arr.flat();
+flatten(arr);  
 
 //n -> 1 dimension
 let arr = [1, 2, [3, 4], 5,[[6,7]]];
@@ -139,7 +139,7 @@ function flatten(arr) {
     }
     return result;
 }
-flatten(arr); //OR arr.flat();
+flatten(arr); 
 
 //array- square 
 let arr = [1, 2, 3, 4];
