@@ -218,7 +218,7 @@ getQuarter(2020, 06, 40);
 
 //days passed 
 function daysPassed() {
-    let today = new Date; 
+    let today = new Date(); 
     return `${Math.floor((today.getTime() - new Date(today.getFullYear(), 0, 1).getTime()) / (1000 * 60 * 60 * 24))} day(s) of ${today.getFullYear()} have passed.`; 
 }
 daysPassed();
