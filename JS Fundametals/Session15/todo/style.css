@@ -1,0 +1,66 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color:#b6b89d ;
+	
+}
+.container{
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+	max-width: 500px;
+	padding: 20px;
+    margin: 50px auto; 
+
+}
+.addTask{
+    display: flex;
+}
+h3{
+    margin-bottom: 10px;
+}
+.addTask > input[type="text"]{
+	width: 90%;
+	color: #333;
+	border:none;
+	border-bottom: 2px solid #666;
+	background: none;
+	padding: 10px;
+	font-size: 16px;
+    outline: none;
+    
+}
+.addTask button{
+	margin: 0 10px;
+	background:#999b84;
+	color: #fff;
+	font-size: 14px;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.container input[type="checkbox"]{
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    margin: 0px 5px 0px 5px;
+    outline: none;
+    cursor: pointer;
+
+}
+.container input[type="checkbox"]:checked{
+    background-color: #d8ac9c;
+}
+
+
+
