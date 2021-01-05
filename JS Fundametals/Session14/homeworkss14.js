@@ -123,7 +123,7 @@ function flatten(arr) {
     }
     return result;
 }
-flatten(arr);  //Or: arr.flat();
+flatten(arr);  
 
 //n -> 1 dimension
 let arr = [1, 2, [3, 4], 5,[[6,7]]];
@@ -139,7 +139,7 @@ function flatten(arr) {
     }
     return result;
 }
-flatten(arr); //OR arr.flat();
+flatten(arr); 
 
 //array- square 
 let arr = [1, 2, 3, 4];
@@ -218,7 +218,7 @@ getQuarter(2020, 06, 40);
 
 //days passed 
 function daysPassed() {
-    let today = new Date; 
+    let today = new Date(); 
     return `${Math.floor((today.getTime() - new Date(today.getFullYear(), 0, 1).getTime()) / (1000 * 60 * 60 * 24))} day(s) of ${today.getFullYear()} have passed.`; 
 }
 daysPassed();
@@ -235,7 +235,7 @@ function age(y, m, d) {
         return `${years - 1} year(s) old`; 
     }
     else {
-        if (today.getDate() >= dob.getDate) {
+        if (today.getDate() >= dob.getDate()) {
             return `${years} year(s) old`; 
         }
         else {
@@ -296,7 +296,7 @@ function monDate(y,m,d) {
 
 monDate(2020,1,23); 
 
-// difference in time - 2 countries 
+// difference in time - cap of 2 countries 
 function getTimeZone(cap) {
     let capTimeZone;
     let capTimeZoneList
@@ -336,38 +336,36 @@ function getTimeZone(cap) {
         }
     }
     switch (capTimeZone) {
-        case "uct_11": return +(-11); 
-        case "uct_10": return +(-10); 
-        case "uct_9": return +(-9); 
-        case "uct_8": return +(-8); 
-        case "uct_7": return +(-7); 
-        case "uct_6": return +(-6); 
-        case "uct_5": return +(-5); 
-        case "uct_4": return +(-4); 
-        case "uct_3": return +(-3); 
-        case "uct_2": return +(-2); 
-        case "uct_1": return +(-1); 
-        case "uct0": return +(0); 
-        case "uct1": return +(1); 
-        case "uct2": return +(2); 
-        case "uct3": return +(3); 
-        case "uct4": return +(4); 
-        case "uct5": return +(5); 
-        case "uct6": return +(6); 
-        case "uct7": return +(7); 
-        case "uct8": return +(8); 
-        case "uct9": return +(9); 
-        case "uct10": return +(10); 
-        case "uct11": return +(11); 
-        case "uct12": return +(12); 
-        case "uct13": return +(13);
-        case "uct14": return +(14); 
+        case "uct_11": return -11; 
+        case "uct_10": return -10; 
+        case "uct_9": return -9; 
+        case "uct_8": return -8; 
+        case "uct_7": return -7; 
+        case "uct_6": return -6; 
+        case "uct_5": return -5; 
+        case "uct_4": return -4; 
+        case "uct_3": return -3; 
+        case "uct_2": return -2; 
+        case "uct_1": return -1; 
+        case "uct0": return 0; 
+        case "uct1": return 1; 
+        case "uct2": return 2; 
+        case "uct3": return 3; 
+        case "uct4": return 4; 
+        case "uct5": return 5; 
+        case "uct6": return 6; 
+        case "uct7": return 7; 
+        case "uct8": return 8; 
+        case "uct9": return 9; 
+        case "uct10": return 10; 
+        case "uct11": return 11; 
+        case "uct12": return 12; 
+        case "uct13": return 13;
+        case "uct14": return 14; 
     }
 }
 
 function diff(cap1, cap2) {
-    console.log(`Current time in ${cap1} is ${new Date(new Date().setHours(new Date().getHours()+ (getTimeZone(cap1))-7)).toLocaleString()}`);
-    console.log(`Current time in ${cap2} is ${new Date(new Date().setHours(new Date().getHours()+ (getTimeZone(cap2))-7)).toLocaleString()}`)
     if (getTimeZone(cap1) > getTimeZone(cap2)) {
         console.log(`${cap1} is ${Math.abs(getTimeZone(cap1) - getTimeZone(cap2))} hour(s) ahead of ${cap2}`); 
     }
