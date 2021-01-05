@@ -1,34 +1,40 @@
-// Todolist
-let todos = [
-  { id: 1, title: "Coding", completed: false },
-  { id: 2, title: "Xem bắn pháo hoa", completed: false },
-  { id: 3, title: "Giao bài tập lớp FE12", completed: true},
-  { id: 4, title: "Đòi nợ Thảo 10$", completed: false },
-  { id: 5, title: "Dọn nhà", completed: true },
-  // add more
-  { id: 6, title: "Đi gym", completed: true },
-  { id: 7, title: "Đi học nhảy", completed: false},
-  { id: 8, title: "Đi học đàn", completed: false },
-];
+let input = document.querySelector('input');
+		let btn = document.querySelector('.addTask > button');
 
-// Từ todolist trên render ra trang HTML theo mẫu trong ảnh
-let notCompleted = document.querySelector(".pending");
-let completed = document.querySelector(".done");
-for (let i = 0; i < todos.length; i++){
-  let check = document.createElement("input");
-  check.setAttribute("type", "checkbox");
-  let label = document.createElement("label"); 
-  check.id = todos[i].id;
-  check.dataset.title = todos[i].title;
-  label.setAttribute("for",check.id)
-  label.innerHTML = `${todos[i].title}<br>`; 
-  if (todos[i].completed) {
-    check.setAttribute("checked","checked")
-    completed.appendChild(check);
-    completed.appendChild(label); 
-  }
-  else {
-    notCompleted.appendChild(check);
-    notCompleted.appendChild(label);
-  }
-}
+		btn.addEventListener('click', addList);
+		input.addEventListener('keyup', (e)=>{
+			(e.keyCode === 13 ? addList(e) : null);
+		})
+
+		function addList(e){
+			let notCompleted = document.querySelector('.pending');
+			let Completed = document.querySelector('.done');
+
+			let newLi = document.createElement('li');
+			let checkBtn = document.createElement('button');
+			let delBtn = document.createElement('button');
+
+			checkBtn.innerHTML = '<i class="fa fa-circle-thin"> </i>';
+			delBtn.innerHTML = '<i class="fa fa-trash"></i>';
+
+
+			if(input.value !==''){
+				newLi.textContent = input.value;
+        input.value = '';
+        notCompleted.appendChild(checkBtn);
+				notCompleted.appendChild(newLi);
+				newLi.appendChild(delBtn);
+			}
+
+			checkBtn.addEventListener('click', function(){
+				let list = this.nextElementSibling;
+				list.remove();
+				Completed.appendChild(list);
+				checkBtn.style.display = 'none';
+			});
+
+			delBtn.addEventListener('click', function(){
+				let parent = this.parentNode;
+				parent.remove();
+			});
+		}
