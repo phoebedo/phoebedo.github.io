@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+table {
+border-collapse: collapse ;
+margin-bottom: 1rem;
+}
+
+tr,
+td {
+width: 40px;
+height: 40px;
+border: 1.5px solid black;
+text-align: center;
+}
