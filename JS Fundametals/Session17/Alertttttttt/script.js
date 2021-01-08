@@ -14,19 +14,16 @@ btn.onclick = function () {
    setTimeout(function () {
     alert.style.opacity = "0";
     alert.style.display= "none"
-    }, 2000); 
+   }, 6000); 
+  
+   let current = document.getElementsByClassName("close-btn");
+   for (let i = 0; i < current.length; i++) {
+     current[i].onclick = function(){
+       current[i].parentElement.style.opacity = "0";
+       setTimeout(function(){ current[i].parentElement.style.display = "none"}, 600);
+     }
+   }
     
 }
-
-//hoặc có nút tắt trong bảng thông báo 
-let current = document.getElementsByClassName("close-btn");
-for (let i = 0; i < current.length; i++) {
-  current[i].onclick = function(){
-    current[i].parentElement.style.opacity = "0";
-    setTimeout(function(){ current[i].parentElement.style.display = "none"}, 600);
-  }
-}
-
-// 
 
 
