@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework1</title>
+    <style>
+        *{
+            padding: 0px;
+            margin:0px; 
+            box-sizing:border-box;
+        }
+        .row{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: aqua;
+            padding: 15px;
+        }
+        .items{            
+            width: calc(100% / 3);
+            height: 150px;
+            padding: 15px;
+        }
+        .itemsct {
+            background-color: blue;
+            border: 0.5px solid black;
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 720px){
+            .row {
+                background-color: pink;  
+            }
+            .items { 
+                width: 100%;
+                padding: 0px;
+                padding-bottom: 30px;
+                display: block;
+                background-color: aqua;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="items"><div class="itemsct"></div></div>
+            <div class="items"><div class="itemsct"></div></div>
+            <div class="items"><div class="itemsct"></div></div>
+            <div class="items"><div class="itemsct"></div></div>
+            <div class="items"><div class="itemsct"></div></div>
+            <div class="items"><div class="itemsct"></div></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework1</title>
+    <style>
+        *{
+            padding: 0px;
+            margin:0px; 
+            box-sizing:border-box;
+            
+        }
+        .container {
+            width: 100%;
+            background-color: pink;
+        }   
+        .header {
+            width: 100%;
+            height: 50px;
+            background-color: pink;
+        }
+        .body {
+            width: 100%;
+            padding-left: 20%;
+            padding-right: 20%;
+            display: flex;
+            min-height: 600px;
+        }
+        .content {
+            width: 100%;
+        }
+        .sidebar {
+            background-color: blue;
+            width: 30%;
+        }
+        .box{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: white;
+        }
+        .items{            
+            width: calc(100% / 3);
+            height: 150px;
+            padding: 7.5px;
+        }
+        .itemsct {
+            background-color: blue;
+            border: 0.5px solid black;
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 720px){
+            .items{width: 100%; margin-bottom: 30px; padding: 0;}            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            
+        </div>
+        <div class="body">
+            <div class="content">
+                <div class="box">
+                    <div class="items"><div class="itemsct"></div></div>
+                    <div class="items"><div class="itemsct"></div></div>
+                    <div class="items"><div class="itemsct"></div></div>                   
+                    <div class="items"><div class="itemsct"></div></div>                   
+                    <div class="items"><div class="itemsct"></div></div>                   
+                    <div class="items"><div class="itemsct"></div></div>                   
+                    <div class="items"><div class="itemsct"></div></div>   
+                    <div class="items"><div class="itemsct"></div></div>   
+                    <div class="items"><div class="itemsct"></div></div>   
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

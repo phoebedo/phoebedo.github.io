@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework1</title>
+    <style>
+        *{
+            padding: 0px;
+            margin:0px; 
+            box-sizing:border-box;
+            
+        }
+        .container {
+            width: 100%;
+            background-color: pink;
+        }   
+        .header {
+            width: 100%;
+            height: 30px;
+            background-color: orangered;
+        }
+        .body {
+            width: 100%;
+            padding-left: 30px;
+            padding-right: 30px;
+            display: flex;
+            min-height: 600px;
+        }
+        .content {
+            width: 70%;
+            margin-right: 30px;
+        }
+        .sidebar {
+            background-color: blue;
+            width: 30%;
+        }
+        .box{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: white;
+        }
+        .items{            
+            width: calc(100% / 2);
+            height: 150px;
+        }
+        .itemsct {
+            background-color: blue;
+            border: 0.5px solid black;
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 720px){
+            .body {background-color: aqua; display: block;}
+            .logo {width: 80px; height: 20px;}
+            .content {width: 100%; margin-bottom: 30px;}
+            .sidebar{ width: 100%; min-height: 300px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            
+        </div>
+        <div class="body">
+            <div class="content">
+                <div class="box">
+                    <div class="items" style="padding-right: 7.5px; padding-bottom: 7.5px;"><div class="itemsct"></div></div>
+                    <div class="items" style="padding-left: 7.5px; padding-bottom: 7.5px;"><div class="itemsct"></div></div>
+                    <div class="items" style="padding-right: 7.5px; padding-top: 7.5px;"><div class="itemsct"></div></div>
+                    <div class="items" style="padding-left: 7.5px; padding-top: 7.5px;"><div class="itemsct"></div></div>
+                </div>
+            </div>
+            <div class="sidebar"></div>
+        </div>
+    </div>
+</body>
+</html>
