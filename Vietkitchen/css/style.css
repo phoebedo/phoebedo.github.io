@@ -850,63 +850,7 @@ input[type="submit"]{
     right:10px;
     top:10px;
 }
-/*Hour chart*/
-.chart-section{
-    background-color: var(--dark);
-    padding-bottom: 60px;
-    display: flex;
-    justify-content: center;
-    
-
-}
-.hour-group{
-    display: flex;
-}
-.hour-group p{
-    width: 100px;
-    padding-right: 10px;
-    line-height: 1rem;
-    font-size: 1rem;
-
-}
-
-
-
-.hour{
-    background-color: white;
-    padding: -5px;
-    width: 1%;
-    padding: 0; 
-
-}
-.nine{
-    width: 10%;
-}
-.eleven{
-    width:40%;
-}
-.thirteen{
-    width: 50%;
-    background-color: var(--main-color);
-}
-.fifteen{
-    width: 30%;
-}
-.seventeen{
-    width: 25%;
-}
-.nineteen{
-    width: 45%;
-    background-color: var(--main-color);
-}
-.twenty-one{
-    width: 20%
-}
-.plan-your-visit{
-    margin-top: 30px;
-    font-size: smaller;
-}
-/* responsive */
+/* Responsive */
 @media(max-width:991px){
     .testi-item{
         width: calc(50% - 30px);
