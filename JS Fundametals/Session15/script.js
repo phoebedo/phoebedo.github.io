@@ -1,1 +1,0 @@
-new Date().toLocaleTimeString("vi-VN") +"," +new Date(). toLocaleDateString("vi-VN")
